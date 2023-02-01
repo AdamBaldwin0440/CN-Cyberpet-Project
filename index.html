@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dudes and Dragons 5e Pet app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<input id="NamePet" type="text"> <!--Homepage-->
+<button id="NameSub">Submit</button><!--Homepage-->
+ <button id = "TypeD">Dragon</button> <!--Homepage-->
+ <button id="TypeOther">Other</button>
+ 
+ <!--Main Page-->
+<h1 id="NameHeader"> Placeholder: Errol</h1> <!--Replaces input on submit-->
+ <h3 id="PetTypeDis">PH: Dragon</h3> <!--replaces button after press-->
+ <div class = PetDisplay>
+    <div id = DragDisplay> <!--only one at a time-->
+    <img class="DragImg" id= "NormDrag"src="#" alt="Dragon's default image">
+    <img class="DragImg" id= "HungryDrag"src="#" alt="Hungry dragon image">
+    <img class="DragImg" id= "ThirstyDrag"src="#" alt="Thirsty dragon image">
+    <img class="DragImg" id= "SleepDrag"src="#" alt="Sleepy dragon image">
+    <img class="DragImg" id= "SadDrag"src="#" alt="Bored/Sad dragon image">
+    </div>
+    <div id = OtherDisplay> <!--Totally hidden if not picked-->
+        <img class="OtherImg" id= "NormOther"src="#" alt="Other's default image">
+        <img class="OtherImg" id= "HungryOther"src="#" alt="Hungry Other image">
+        <img class="OtherImg" id= "ThirstyOther"src="#" alt="Thirsty Other image">
+        <img class="OtherImg" id= "SleepOther"src="#" alt="Sleepy Other image">
+        <img class="OtherImg" id= "SadOther"src="#" alt="Bored/Sad Other image">
+    </div>
+    <p id="TalkBox">Pet's speech goes here</p>
+    <p id="MoodBox">Pet's current mood here</p>
+</div>
+<div id="Instructs">
+    <h3 id="InstructHead">How to Play</h3>
+    <p id = "InstructText">Text on how to play with pet goes here. Ipsum Dolores etc </p>
+</div>
+<button id="TalkBtn">Talk Button</button>
+<div id="Status">
+    <p>
+    <progress id="HungerBar" min="0" max="100" value="100">
+    </progress>
+    </p>
+    <p>
+        <progress id="Thirst" min ="0" max="100" value="100"></progress>
+    </p>
+    <p>
+        <progress id="Energy" min = "0" max="100" value="100"> </progress>
+    </p>
+    <p>
+        <progress id="Happiness" min="0" max="100" value="100"></progress>
+    </p>
+</div>
+<div>
+    <button class="IntButton" id="FeedBtn">Devour a maiden</button>
+    <button class="IntButton" id="DrinkBtn">Drink</button>
+    <button class="IntButton" id="SleepBtn">Sleep on Hoard</button>
+    <button class="IntButton" id="BurnBtn">Roast a villager</button>
+</div>
+<button id="Reset">Reset</button>
+<script src="./script.js"></script>
+</body>
+</html>
