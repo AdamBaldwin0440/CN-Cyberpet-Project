@@ -8,13 +8,16 @@ const GobImg = document.getElementsByClassName("GobImg");
 const PetTypeDis = document.getElementById("PetTypeDis");
 const TalkBox = document.getElementById("TalkBox");
 const InteractText = document.getElementById("InteractText");
-const Moodbox = document.getElementById("Moodbox"); 
-let HTimer = setInterval(DecreaseH, 5000);
+const MoodBox = document.getElementById("MoodBox"); 
+let testDragonName = null;
+let Timer = null;
 
 NameSub.addEventListener("click", () => {
     NameHeader.innerText = NamePet.value;
     NamePet.style.display = "none";
     NameSub.style.display = "none";
+    testDragonName = new Dragon(NamePet.value);
+    
     }
 )
 TypeDrag.addEventListener("click", () => {
@@ -23,7 +26,7 @@ TypeDrag.addEventListener("click", () => {
     PetTypeDis.style.display = "block";
     PetTypeDis.innerText = "Dragon";
     TypeDrag.style.display = "none";
-
+    Timer = setInterval(DecreaseStats, 1000);
 })
 TypeGob.addEventListener("click", () => {
     TypeDrag.style.display = "none";
@@ -35,8 +38,6 @@ TypeGob.addEventListener("click", () => {
 })
 
 class Pet{
-    
-
     constructor(name){
         this.name = name; //is ths repeating?
         this.hunger = 100;
@@ -46,8 +47,8 @@ class Pet{
     }
 }
 class Dragon extends Pet{
-    constructor() {
-        super ()
+    constructor(name) {
+        super(name)
     }
    Drinks(){
     this.thirst += 20;
@@ -88,33 +89,46 @@ class Dragon extends Pet{
         thirst: this.thirst,
         energy: this.energy,
         happiness: this.happiness,
-    });
-    }
-    DecreaseH = () =>{
-       if(this.hunger == 0){
-        clearInterval(HTimer);
-        alert("Your pet is starving!");}
-        else{
-            this.hunger --;
-            this.hunger = document.getElementById("HungerBar").value
+        });
         }
-
-       }
+    
     }
 
 
+const DecreaseStats = () =>{
+    testDragonName.hunger -= 5;
+    // testDragonName.thirst -= 10;
+    // testDragonName.energy -=10;
+    // testDragonName.happiness -= 10;
+    console.log(testDragonName)
 
-const testDragonName = new Dragon()
+    if(testDragonName.hunger <= 50 && testDragonName.hunger > 25){
+        MoodBox.innerText = "Dragon is hungry";
+        document.getElementById("HungerBar").value = testDragonName.hunger;
+    } else if(testDragonName.hunger <= 25 && testDragonName.hunger > 0){
+        MoodBox.innerText = "Dragon is RAVENOUS";
+        document.getElementById("HungerBar").value = testDragonName.hunger;
+    }else if(testDragonName.hunger == 0){
+        clearInterval(Timer);
+        MoodBox.innerText = "Dragon is now a Skeletal Dragon. You lose!";
+        document.getElementById("HungerBar").value = 0
+    } else {
+        // when pet is still alive
+        document.getElementById("HungerBar").value = testDragonName.hunger
+        MoodBox.innerText = "Dragon is fine"
+    }
+            
+}
 
-setInterval(statDecay, 500);
+// setInterval(statDecay, 500);
 
-// function statDecay() {
-//     const 
-// }
+// // function statDecay() {
+// //     const 
+// // }
 
-testDragonName.Drinks()
-testDragonName.Eats()
-testDragonName.Sleeps()
-testDragonName.BurnVillage()
-testDragonName.Stats()
+// testDragonName.Drinks()
+// testDragonName.Eats()
+// testDragonName.Sleeps()
+// testDragonName.BurnVillage()
+// testDragonName.Stats()
 
