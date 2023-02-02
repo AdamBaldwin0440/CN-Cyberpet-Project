@@ -27,3 +27,14 @@ align-content: center;
     border-style: solid;
 
 }
+
+#PetTypeDis{
+    display: none;
+}
+
+.DragImg{
+    display: none;
+}
+.GobImg{
+    display:none;
+}
