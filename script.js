@@ -60,6 +60,12 @@ class Dragon extends Pet{
 
 const testDragonName = new Dragon()
 
+setInterval(statDecay, 500);
+
+function statDecay() {
+    const 
+}
+
 testDragonName.Drinks()
 testDragonName.Eats()
 testDragonName.Sleeps()
