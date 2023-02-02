@@ -4,12 +4,23 @@ const NameSub = document.getElementById("NameSub");
 const TypeDrag = document.getElementById("TypeDrag");
 const TypeGob = document.getElementById("TypeGob");
 const NameHeader = document.getElementById("NameHeader");
+const NormDrag = document.getElementById("NormDrag");
 
-let PetName
+
+NameSub.addEventListener("click", () => {
+    NameHeader.innerText = NamePet.value;
+    NamePet.style.display = "none";
+    NameSub.style.display = "none";
+}
+)
+TypeDrag.addEventListener("click"), () => {
+    TypeGob.style.display = "none";
+
+}
 
 class Pet{
     constructor(name, hunger, thirst, energy, happiness){
-        this.name = name;
+        this.name = name; //is ths repeating?
         this.hunger = 100;
         this.thirst = 100;
         this.energy = 100;
