@@ -8,13 +8,16 @@ const GobImg = document.getElementsByClassName("GobImg");
 const PetTypeDis = document.getElementById("PetTypeDis");
 const TalkBox = document.getElementById("TalkBox");
 const InteractText = document.getElementById("InteractText");
-const Moodbox = document.getElementById("Moodbox") 
-
+const MoodBox = document.getElementById("MoodBox"); 
+let testDragonName = null;
+let Timer = null;
 
 NameSub.addEventListener("click", () => {
     NameHeader.innerText = NamePet.value;
     NamePet.style.display = "none";
     NameSub.style.display = "none";
+    testDragonName = new Dragon(NamePet.value);
+    
     }
 )
 TypeDrag.addEventListener("click", () => {
@@ -23,7 +26,7 @@ TypeDrag.addEventListener("click", () => {
     PetTypeDis.style.display = "block";
     PetTypeDis.innerText = "Dragon";
     TypeDrag.style.display = "none";
-
+    Timer = setInterval(DecreaseStats, 1000);
 })
 TypeGob.addEventListener("click", () => {
     TypeDrag.style.display = "none";
@@ -34,14 +37,9 @@ TypeGob.addEventListener("click", () => {
 
 })
 
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
-
-
 class Pet{
-
-    constructor(name, hunger, thirst, energy, happiness){
+    constructor(name){
         this.name = name; //is ths repeating?
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
         this.hunger = 100;
         this.thirst = 100;
         this.energy = 100;
@@ -49,17 +47,13 @@ class Pet{
     }
 }
 class Dragon extends Pet{
-    constructor() {
-        super ()
+    constructor(name) {
+        super(name)
     }
    Drinks(){
     this.thirst += 20;
-<<<<<<< HEAD
-    // Feedback.innerText = `${this.name} is drinking`;
-=======
     console.log(`${this.name} is drinking`);
     InteractText.innerText = `${this.name} is drinking`
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
     //interval/timeout to reset it back to blank?
     return this;
    } 
@@ -84,16 +78,9 @@ class Dragon extends Pet{
     this.hunger +10;
     this.energy -= 20;
     this.thirst -= 10;
-<<<<<<< HEAD
-    // Feedback.innerText = `${this.name} is burning a village, bless them`;    
-    return this;
-   }
-  
-=======
     console.log(`${this.name} is having fun rampaging across the land. How lovely`);
     InteractText.innerText = `${this.name} is burning a village, bless them`;    
     return this
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
    }
    Stats() {
     return console.table({
@@ -102,21 +89,46 @@ class Dragon extends Pet{
         thirst: this.thirst,
         energy: this.energy,
         happiness: this.happiness,
-    });
+        });
+        }
+    
+    }
+
+
+const DecreaseStats = () =>{
+    testDragonName.hunger -= 5;
+    // testDragonName.thirst -= 10;
+    // testDragonName.energy -=10;
+    // testDragonName.happiness -= 10;
+    console.log(testDragonName)
+
+    if(testDragonName.hunger <= 50 && testDragonName.hunger > 25){
+        MoodBox.innerText = "Dragon is hungry";
+        document.getElementById("HungerBar").value = testDragonName.hunger;
+    } else if(testDragonName.hunger <= 25 && testDragonName.hunger > 0){
+        MoodBox.innerText = "Dragon is RAVENOUS";
+        document.getElementById("HungerBar").value = testDragonName.hunger;
+    }else if(testDragonName.hunger == 0){
+        clearInterval(Timer);
+        MoodBox.innerText = "Dragon is now a Skeletal Dragon. You lose!";
+        document.getElementById("HungerBar").value = 0
+    } else {
+        // when pet is still alive
+        document.getElementById("HungerBar").value = testDragonName.hunger
+        MoodBox.innerText = "Dragon is fine"
+    }
+            
 }
 
+// setInterval(statDecay, 500);
 
-const testDragonName = new Dragon()
+// // function statDecay() {
+// //     const 
+// // }
 
-setInterval(statDecay, 500);
-
-function statDecay() {
-    const 
-}
-
-testDragonName.Drinks()
-testDragonName.Eats()
-testDragonName.Sleeps()
-testDragonName.BurnVillage()
-testDragonName.Stats()
+// testDragonName.Drinks()
+// testDragonName.Eats()
+// testDragonName.Sleeps()
+// testDragonName.BurnVillage()
+// testDragonName.Stats()
 
