@@ -1,7 +1,11 @@
 const Feedback = document.getElementById("InteractionsFeedback");
 const NamePet = document.getElementById("NamePet");
 const NameSub = document.getElementById("NameSub");
-const TypeD = document.getElementById("TypeD");
+const TypeDrag = document.getElementById("TypeDrag");
+const TypeGob = document.getElementById("TypeGob");
+const NameHeader = document.getElementById("NameHeader");
+
+let PetName
 
 class Pet{
     constructor(name, hunger, thirst, energy, happiness){
