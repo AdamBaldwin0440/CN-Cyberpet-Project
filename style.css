@@ -1,20 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
 * {
+    font-family: 'Aboreto', cursive;
     
 }
 
 body {
-background-color: #FBAB7E;
-background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-display: flex;
-flex-flow: column wrap;
-text-align: center;
-align-content: center;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    align-content: center;
+    text-align: center;
 
 
 }
 
-#NamePet {
+#SubmitRow {
     display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    width: 400px;
+    height: 100px;
+
+}
+
+/* Main Display Box + inner box elements */
+
+#PetTypeDis {
 
 }
 
@@ -23,7 +40,118 @@ align-content: center;
     flex-flow: column wrap;
     text-align: center;
     align-content: center;
-    border: 5px;
+
+}
+
+.PetDisplay {
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+    border: 4px;
+    border-color: #7c1919;
+    box-shadow: inset 0 0 30px #640f0f;
+    border-style: solid;
+    border-radius: 20px;
+    
+}
+
+#DragDisplay {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+
+button {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    width: 90px;
+    height: 45px;
+    padding: 5px;
+    margin: 5px;
+    border: 4px;
+    border-color: #7c1919;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #f78562;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #7c1919;
+}
+
+#Interacts {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #7c1919;
+    box-shadow: inset 0 0 30px #640f0f;
+
+}
+
+#NamePet {
+    display: flex;
+    border: 4px;
     border-style: solid;
 
+}
+
+/* Inner main display text */
+#TalkBox {
+
+
+}
+
+#InteractionsFeedback {
+
+
+}
+
+#MoodBox {
+
+
+}
+
+/* Talk button and status bars */
+#TalkBtn {
+    margin: auto;
+}
+
+#Status {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 400px;
+    height: 100px;
+    border: 4px;
+
+}
+
+/* Interaction buttons */
+#Instructs {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+    border: 4px;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#Reset {
+    margin: auto;
 }
