@@ -1,5 +1,11 @@
+const Feedback = document.getElementById("InteractionsFeedback");
+const NamePet = document.getElementById("NamePet");
+const NameSub = document.getElementById("NameSub");
+const TypeDrag = document.getElementById("TypeDrag");
+const TypeGob = document.getElementById("TypeGob");
+const NameHeader = document.getElementById("NameHeader");
 
-
+let PetName
 
 class Pet{
     constructor(name, hunger, thirst, energy, happiness){
@@ -17,21 +23,22 @@ class Dragon extends Pet{
    Drinks(){
     this.thirst += 20;
     console.log(`${this.name} is drinking`);
-    //somewhere.innerText to display this onscreen (ask K where)
+    Feedback.innerText = `${this.name} is drinking`
+    //interval/timeout to reset it back to blank?
     return this
    } 
    Devour(){
     this.hunger += 20;
     this.thirst -= 10;
     console.log(`${this.name} has devoured a princess/maiden/knight`);
-    //somewhere.innerText to display this onscreen (ask K where)
+    Feedback.innerText = `${this.name} has devoured someone`;
     return this
    }
    Sleep(){
     this.energy += 20;
     this.hunger -= 10;
     console.log(`${this.name} is sleeping on their hoard of gold`)
-    //somewhere.innerText to display this onscreen (ask K where)
+    Feedback.innerText = `${this.name} is sleeping on their hoard of gold`;    
     return this;
    }
    BurnVillage(){
@@ -39,8 +46,8 @@ class Dragon extends Pet{
     this.hunger +10;
     this.energy -= 20;
     this.thirst -= 10;
-    console.log(`${this.name} is having fun rampaging across the land. How lovely`)
-    //somewhere.innerText to display this onscreen (ask K where)
+    console.log(`${this.name} is having fun rampaging across the land. How lovely`);
+    Feedback.innerText = `${this.name} is burning a village, bless them`;    
     return this
    }
 }
