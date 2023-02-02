@@ -8,8 +8,8 @@ const GobImg = document.getElementsByClassName("GobImg");
 const PetTypeDis = document.getElementById("PetTypeDis");
 const TalkBox = document.getElementById("TalkBox");
 const InteractText = document.getElementById("InteractText");
-const Moodbox = document.getElementById("Moodbox") 
-
+const Moodbox = document.getElementById("Moodbox"); 
+let HTimer = setInterval(DecreaseH, 5000);
 
 NameSub.addEventListener("click", () => {
     NameHeader.innerText = NamePet.value;
@@ -34,14 +34,11 @@ TypeGob.addEventListener("click", () => {
 
 })
 
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
-
-
 class Pet{
+    
 
-    constructor(name, hunger, thirst, energy, happiness){
+    constructor(name){
         this.name = name; //is ths repeating?
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
         this.hunger = 100;
         this.thirst = 100;
         this.energy = 100;
@@ -54,12 +51,8 @@ class Dragon extends Pet{
     }
    Drinks(){
     this.thirst += 20;
-<<<<<<< HEAD
-    // Feedback.innerText = `${this.name} is drinking`;
-=======
     console.log(`${this.name} is drinking`);
     InteractText.innerText = `${this.name} is drinking`
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
     //interval/timeout to reset it back to blank?
     return this;
    } 
@@ -84,16 +77,9 @@ class Dragon extends Pet{
     this.hunger +10;
     this.energy -= 20;
     this.thirst -= 10;
-<<<<<<< HEAD
-    // Feedback.innerText = `${this.name} is burning a village, bless them`;    
-    return this;
-   }
-  
-=======
     console.log(`${this.name} is having fun rampaging across the land. How lovely`);
     InteractText.innerText = `${this.name} is burning a village, bless them`;    
     return this
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
    }
    Stats() {
     return console.table({
@@ -103,16 +89,28 @@ class Dragon extends Pet{
         energy: this.energy,
         happiness: this.happiness,
     });
-}
+    }
+    DecreaseH = () =>{
+       if(this.hunger == 0){
+        clearInterval(HTimer);
+        alert("Your pet is starving!");}
+        else{
+            this.hunger --;
+            this.hunger = document.getElementById("HungerBar").value
+        }
+
+       }
+    }
+
 
 
 const testDragonName = new Dragon()
 
 setInterval(statDecay, 500);
 
-function statDecay() {
-    const 
-}
+// function statDecay() {
+//     const 
+// }
 
 testDragonName.Drinks()
 testDragonName.Eats()
