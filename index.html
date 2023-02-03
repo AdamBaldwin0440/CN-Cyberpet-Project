@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+<div id="SubmitRow">
+    <button id = "TypeDrag">Dragon</button> <!--Homepage-->
+    <button id="TypeGob">Goblin</button>
+</div>
+
 <input id="NamePet" type="text"> <!--Homepage-->
 <button id="NameSub">Submit</button><!--Homepage-->
- <button id = "TypeDrag">Dragon</button> <!--Homepage-->
- <button id="TypeGob">Goblin</button>
+
+
  
  <!--Main Page-->
 <h1 id="NameHeader"> </h1> <!--Replaces input on submit-->
@@ -19,31 +25,31 @@
  <div class = PetDisplay>
     <div id = DragDisplay> <!--only one at a time-->
     <img class="DragImg" id= "NormDrag" src="./Images/DragonDefault.gif" alt="Dragon's default image">
-    <img class="DragImg" id= "HungryDrag" src="./DRG-sprites/DRG-hungry.gif" alt="Hungry dragon image">
+    <!-- <img class="DragImg" id= "HungryDrag" src="./DRG-sprites/DRG-hungry.gif" alt="Hungry dragon image">
     <img class="DragImg" id= "ThirstyDrag" src="./DRG-sprites/DRG-thirsty.gif" alt="Thirsty dragon image">
     <img class="DragImg" id= "SleepDrag" src="./DRG-sprites/DRG-sleepy.gif" alt="Sleepy dragon image">
-    <img class="DragImg" id= "SadDrag" src="./DRG-sprites/DRG-sad.gif" alt="Bored/Sad dragon image">
+    <img class="DragImg" id= "SadDrag" src="./DRG-sprites/DRG-sad.gif" alt="Bored/Sad dragon image"> -->
     </div>
     <div id = GoblinDisplay> <!--Totally hidden if not picked-->
-        <img class="GobImg" id= "NormOther" src="#" alt="Other's default image">
+        <!-- <img class="GobImg" id= "NormOther" src="#" alt="Other's default image">
         <img class="GobImg" id= "HungryOther" src="#" alt="Hungry Other image">
         <img class="GobImg" id= "ThirstyOther" src="#" alt="Thirsty Other image">
         <img class="GobImg" id= "SleepOther" src="#" alt="Sleepy Other image">
-        <img class="GobImg" id= "SadOther" src="#" alt="Bored/Sad Other image">
+        <img class="GobImg" id= "SadOther" src="#" alt="Bored/Sad Other image"> -->
     </div>
     <p id="TalkBox">Pet's speech goes here</p>
     <p id ="InteractText">Interactions will display here</p>
     <div id="MoodMsgs"> 
-        <p class= "Moodlets" id="MoodBoxH">Pet's current Hunger mood here</p>
-        <p class= "Moodlets" id="MoodBoxT">Pet's current Thirst mood here</p>
-        <p class= "Moodlets" id="MoodBoxE">Pet's current Energy mood here</p>
-        <p class= "Moodlets" id="MoodBoxHap">Pet's current Happy mood here</p>
+        <p class= "Moodlets" id="MoodBoxH">Pet's Hunger</p>
+        <p class= "Moodlets" id="MoodBoxT">Pet's Thirst</p>
+        <p class= "Moodlets" id="MoodBoxE">Pet's Energy</p>
+        <p class= "Moodlets" id="MoodBoxHap">Pet's Happy</p>
     </div>
 </div>
-<div id="Instructs">
+<!-- <div id="Instructs">
     <h3 id="InstructHead">How to Play</h3>
     <p id = "InstructText">Text on how to play with pet goes here. Ipsum Dolores etc </p>
-</div>
+</div> -->
 <button id="TalkBtn">Talk Button</button>
 <div id="Status">
     <p> Hunger
@@ -60,7 +66,7 @@
         <progress id="HappinessBar" min="0" max="100" value="100"></progress>
     </p>
 </div>
-<div>
+<div id="Interacts">
     <button class="IntButton" id="FeedBtn">Devour a maiden</button>
     <button class="IntButton" id="DrinkBtn">Drink</button>
     <button class="IntButton" id="SleepBtn">Sleep on Hoard</button>
