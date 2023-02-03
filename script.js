@@ -110,7 +110,7 @@ const DecreaseStats = () =>{
     } else if(testDragonName.hunger <= 25 && testDragonName.hunger > 0){
         Moodlets[0].innerText ="Dragon is RAVENOUS";
         document.getElementById("HungerBar").value = testDragonName.hunger;
-    }else if(testDragonName.hunger == 0){
+    } else if(testDragonName.hunger == 0){
         clearInterval(Timer);
         Moodlets[0].innerText ="Dragon is now a Skeletal Dragon. You lose!";
         document.getElementById("HungerBar").value = 0
@@ -125,7 +125,7 @@ const DecreaseStats = () =>{
     } else if(testDragonName.thirst <= 25 && testDragonName.thirst > 0){
         Moodlets[1].innerText ="Dragon is PARCH";
         document.getElementById("ThirstBar").value = testDragonName.thirst;
-    }else if(testDragonName.thirst == 0){
+    } else if(testDragonName.thirst == 0){
         clearInterval(Timer);
         Moodlets[1].innerText ="Even fire-lizards need hydration! You lose!";
         document.getElementById("ThirstBar").value = 0
@@ -140,7 +140,7 @@ const DecreaseStats = () =>{
     } else if(testDragonName.energy <= 25 && testDragonName.energy > 0){
         Moodlets[2].innerText ="Dragon is EXHAUSTED";
         document.getElementById("EnergyBar").value = testDragonName.energy;
-    }else if(testDragonName.energy == 0){
+    } else if(testDragonName.energy == 0){
         clearInterval(Timer);
         Moodlets[2].innerText ="Dragon will never wake up again! You lose!";
         document.getElementById("EnergyBar").value = 0
@@ -154,7 +154,7 @@ const DecreaseStats = () =>{
     } else if(testDragonName.happiness <= 25 && testDragonName.happiness > 0){
         Moodlets[3].innerText ="Dragon is DEPRESSED";
         document.getElementById("HappinessBar").value = testDragonName.happiness;
-    }else if(testDragonName.happiness == 0){
+    } else if(testDragonName.happiness == 0){
         clearInterval(Timer); //isn't stopping at zero, can't understand why!
         Moodlets[3].innerText ="Dragon has left this cruel world! You lose!";
         document.getElementById("HappinessBar").value = 0
@@ -214,11 +214,7 @@ const DecreaseStats = () =>{
     }
 }
 
-// setInterval(statDecay, 500);
 
-// // function statDecay() {
-// //     const 
-// // }
 
 // testDragonName.Drinks()
 // testDragonName.Eats()
