@@ -57,7 +57,7 @@ body {
     align-items: center;
     align-content: center;
     text-align: center;
-    height: 500px;
+    /* height: 500px; */
     width: 700px;
     border: 4px;
     border-color: #7c1919;

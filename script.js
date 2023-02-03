@@ -111,59 +111,59 @@ const DecreaseStats = () =>{
     
 
     if(testDragonName.hunger <= 50 && testDragonName.hunger > 25){
-        Moodlets[0].innerText ="Dragon is hungry";
+        Moodlets[0].innerText =` ${NamePet.value}is hungry`;
         document.getElementById("HungerBar").value = testDragonName.hunger;
     } else if(testDragonName.hunger <= 25 && testDragonName.hunger > 0){
-        Moodlets[0].innerText ="Dragon is RAVENOUS";
+        Moodlets[0].innerText =`${NamePet.value} is RAVENOUS`;
         document.getElementById("HungerBar").value = testDragonName.hunger;
     }else if(testDragonName.hunger == 0){
         clearInterval(Timer);
-        Moodlets[0].innerText ="Dragon is now a Skeletal Dragon. You lose!";
+        Moodlets[0].innerText =`${NamePet.value}is now a Skeletal Dragon. You lose!`;
         document.getElementById("HungerBar").value = 0
     } else {
-        Moodlets[0].innerText ="Dragon is fine";
+        Moodlets[0].innerText =`${NamePet.value} is fine`;
         document.getElementById("HungerBar").value = testDragonName.hunger;
     }
     if (testDragonName.thirst <= 50 && testDragonName.thirst > 25){
-        Moodlets[1].innerText ="Dragon is thirsty";
+        Moodlets[1].innerText =`${NamePet.value} is thirsty`;
         document.getElementById("ThirstBar").value = testDragonName.thirst;
     } else if(testDragonName.thirst <= 25 && testDragonName.thirst > 0){
-        Moodlets[1].innerText ="Dragon is PARCH";
+        Moodlets[1].innerText =`${NamePet.value} is PARCHED`;
         document.getElementById("ThirstBar").value = testDragonName.thirst;
     }else if(testDragonName.thirst == 0){
         clearInterval(Timer);
         Moodlets[1].innerText ="Even fire-lizards need hydration! You lose!";
         document.getElementById("ThirstBar").value = 0
     } else {
-        Moodlets[1].innerText ="Dragon is fine";
+        Moodlets[1].innerText =`${NamePet.value} is fine`;
         document.getElementById("ThirstBar").value = testDragonName.thirst;
     }
     if (testDragonName.energy <= 50 && testDragonName.energy > 25){
-        Moodlets[2].innerText ="Dragon is tired";
+        Moodlets[2].innerText = `${NamePet.value} is sleepy`;
         document.getElementById("EnergyBar").value = testDragonName.energy;
     } else if(testDragonName.energy <= 25 && testDragonName.energy > 0){
-        Moodlets[2].innerText ="Dragon is EXHAUSTED";
+        Moodlets[2].innerText =`${NamePet.value} is EXHAUSTED`;
         document.getElementById("EnergyBar").value = testDragonName.energy;
     }else if(testDragonName.energy == 0){
         clearInterval(Timer);
-        Moodlets[2].innerText ="Dragon will never wake up again! You lose!";
+        Moodlets[2].innerText =`${NamePet.value}will never wake up again! You lose!`;
         document.getElementById("EnergyBar").value = 0
     } else {
-        Moodlets[2].innerText ="Dragon is fine";
+        Moodlets[2].innerText = `${NamePet.value} is fine`;
         document.getElementById("EnergyBar").value = testDragonName.energy;
     }
     if (testDragonName.happiness <= 50 && testDragonName.happiness > 25){
-        Moodlets[3].innerText ="Dragon is sad";
+        Moodlets[3].innerText = `${NamePet.value} is sad`;
         document.getElementById("HappinessBar").value = testDragonName.happiness;
     } else if(testDragonName.happiness <= 25 && testDragonName.happiness > 0){
-        Moodlets[3].innerText ="Dragon is DEPRESSED";
+        Moodlets[3].innerText = `${NamePet.value} is DEPRESSED`;
         document.getElementById("HappinessBar").value = testDragonName.happiness;
     }else if(testDragonName.happiness == 0){
-        clearInterval(Timer); //isn't stopping at zero, can't understand why!
-        Moodlets[3].innerText ="Dragon has left this cruel world! You lose!";
+        clearInterval(Timer); 
+        Moodlets[3].innerText =`${NamePet.value} has left this cruel world! You lose!`;
         document.getElementById("HappinessBar").value = 0
     } else {
-        Moodlets[3].innerText ="Dragon is fine";
+        Moodlets[3].innerText =`${NamePet.value} is fine`;
         document.getElementById("HappinessBar").value = testDragonName.happiness;
     }
 
