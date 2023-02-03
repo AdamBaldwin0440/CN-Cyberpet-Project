@@ -28,8 +28,9 @@ body {
     align-items: center;
     align-content: center;
     margin: auto;
-    width: 400px;
+    width: 200px;
     height: 100px;
+    
 
 }
 
@@ -65,13 +66,16 @@ body {
     border-radius: 20px;    
 }
 
-/* #DragDisplay {
+#MoodMsgs {
+   
+}
+#DragDisplay {
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-self: center;
-    align-content: center; */
-/* } */
+    align-content: center;
+}
 
 button {
     font-size: 13px;
@@ -168,7 +172,3 @@ button:hover {
 #Reset {
     margin: auto;
 }
-
-/* #PetTypeDis{
-    /* display: none; */
-/* } */

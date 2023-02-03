@@ -259,3 +259,4 @@ IntButton[3].addEventListener("click", () => {
 // testDragonName.Sleeps()
 // testDragonName.BurnVillage()
 // testDragonName.Stats();
+
