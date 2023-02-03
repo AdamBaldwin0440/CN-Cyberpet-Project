@@ -33,7 +33,12 @@
     </div>
     <p id="TalkBox">Pet's speech goes here</p>
     <p id ="InteractText">Interactions will display here</p>
-    <p id="MoodBox">Pet's current mood here</p>
+    <div id="MoodMsgs"> 
+        <p class= "Moodlets" id="MoodBoxH">Pet's current Hunger mood here</p>
+        <p class= "Moodlets" id="MoodBoxT">Pet's current Thirst mood here</p>
+        <p class= "Moodlets" id="MoodBoxE">Pet's current Energy mood here</p>
+        <p class= "Moodlets" id="MoodBoxHap">Pet's current Happy mood here</p>
+    </div>
 </div>
 <div id="Instructs">
     <h3 id="InstructHead">How to Play</h3>
@@ -46,13 +51,13 @@
     </progress>
     </p>
     <p> Thirst
-        <progress id="Thirst" min ="0" max="100" value="100"></progress>
+        <progress id="ThirstBar" min ="0" max="100" value="100"></progress>
     </p>
     <p> Energy
-        <progress id="Energy" min = "0" max="100" value="100"> </progress>
+        <progress id="EnergyBar" min = "0" max="100" value="100"> </progress>
     </p>
     <p> Happiness
-        <progress id="Happiness" min="0" max="100" value="100"></progress>
+        <progress id="HappinessBar" min="0" max="100" value="100"></progress>
     </p>
 </div>
 <div>
