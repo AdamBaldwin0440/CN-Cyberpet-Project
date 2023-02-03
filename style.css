@@ -63,14 +63,12 @@ body {
     border-color: #7c1919;
     box-shadow: inset 0 0 30px #640f0f;
     border-style: solid;
-    border-radius: 20px;
-    
+    border-radius: 20px;    
 }
 
 #MoodMsgs {
-    
+   
 }
-
 #DragDisplay {
     display: flex;
     flex-flow: row;
@@ -131,7 +129,6 @@ button:hover {
 
 #MoodBox {
 
-
 }
 
 /* Talk button and status bars */
@@ -163,18 +160,15 @@ button:hover {
     border-radius: 20px;
     margin: 20px;
 }
+.DragImg{
+    display: none;
+    width: 300px;
+}
+
+.GobImg{
+    display:none;
+}   
 
 #Reset {
     margin: auto;
-}
-
-#PetTypeDis{
-    /* display: none; */
-}
-
-.DragImg{
-    /* display: none; */
-}
-.GobImg{
-    display:none;
 }
