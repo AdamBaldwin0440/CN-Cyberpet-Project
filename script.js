@@ -213,6 +213,7 @@ const DecreaseStats = () =>{
         DragImg[5].style.display = "none";
     }
 }
+
 IntButton[0].addEventListener("click", () => {
     testDragonName.Eats()
 })
