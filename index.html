@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<input id="NamePet" type="text"> 
 
 <div id="SubmitRow">
     <button id = "TypeDrag">Dragon</button>
     <button id="TypeGob">Goblin</button>
+    <input id="NamePet" type="text"> <!--Homepage-->
+    <button id="NameSub">Submit</button><!--Homepage-->
 </div>
-
-<input id="NamePet" type="text"> 
 <button id="NameSub">Submit</button>
 
+ <!--Main Page-->
+<h1 id="NameHeader"> </h1> <!--Replaces input on submit-->
+ <h3 id="PetTypeDis"> </h3> <!--replaces button after press-->
 
 <h1 id="NameHeader"> </h1> 
  <h3 id="PetTypeDis"> </h3> 
@@ -27,10 +31,11 @@
     <img class="DragImg" id= "ThirstyDrag" src="./DRG-sprites/DRG-thirsty.gif" alt="Thirsty dragon image">
     <img class="DragImg" id= "SleepDrag" src="./DRG-sprites/DRG-sleepy.gif" alt="Sleepy dragon image">
     <img class="DragImg" id= "SadDrag" src="./DRG-sprites/DRG-sad.gif" alt="Bored/Sad dragon image">
-    <img class="DragImg" id= "DeadDrag" src="./Images/Dead.png" alt="Game Over Headstone">
+    <img class="DragImg" id= "DeadDrag" src="./DRG-sprites/GRAVE.png" alt="Game Over Headstone">
+    <img class="DragImg" id="DizzyDrag" src="./DRG-sprites/DRG-dizzy.gif" alt="Confused/dazed dragon image">
     </div>
     <div id = GoblinDisplay> <!--Totally hidden if not picked-->
-        <img class="GobImg" id= "NormOther" src="#" alt="Other's default image">
+        <img class="GobImg" id= "NormOther" src="./Images/goblinDefault.jpg" alt="Other's default image">
         <img class="GobImg" id= "HungryOther" src="#" alt="Hungry Other image">
         <img class="GobImg" id= "ThirstyOther" src="#" alt="Thirsty Other image">
         <img class="GobImg" id= "SleepOther" src="#" alt="Sleepy Other image">
@@ -43,7 +48,6 @@
         <p class= "Moodlets" id="MoodBoxT">Pet's Thirst</p>
         <p class= "Moodlets" id="MoodBoxE">Pet's Energy</p>
         <p class= "Moodlets" id="MoodBoxHap">Pet's Happy</p>
-    </div>
 </div>
 <!-- <div id="Instructs">
     <h3 id="InstructHead">How to Play</h3>
@@ -71,6 +75,9 @@
     <button class="IntButton" id="SleepBtn">Sleep on Hoard</button>
     <button class="IntButton" id="BurnBtn">Roast a villager</button>
 </div>
+<button onClick ="window.location.reload();" id="Reset">Reset</button>
+<script src="./script.js">
+</script>
 <button onClick ="window.location.reload();" id="Reset">Reset</button>
 <script src="./script.js"></script>
 </body>
