@@ -168,7 +168,7 @@ button:hover {
 }
 
 .DragImg{
-    /* display: none; */
+    display: none;
 }
 .GobImg{
     display:none;

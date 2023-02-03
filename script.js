@@ -8,8 +8,8 @@ const GobImg = document.getElementsByClassName("GobImg");
 const PetTypeDis = document.getElementById("PetTypeDis");
 const TalkBox = document.getElementById("TalkBox");
 const InteractText = document.getElementById("InteractText");
-// const MoodBoxH = document.getElementById("MoodBoxH");
-const Moodlets = document.getElementsByClassName("Moodlets")
+const Moodlets = document.getElementsByClassName("Moodlets");
+const IntButton = document.getElementsByClassName ("IntButton");
 let testDragonName = null;
 let Timer = null;
 
@@ -23,7 +23,7 @@ NameSub.addEventListener("click", () => {
 )
 TypeDrag.addEventListener("click", () => {
     TypeGob.style.display = "none";
-    // DragImg[0].style.display = "block";
+    DragImg[0].style.display = "block";
     PetTypeDis.style.display = "block";
     PetTypeDis.innerText = "Dragon";
     TypeDrag.style.display = "none";
@@ -40,8 +40,8 @@ TypeGob.addEventListener("click", () => {
 
 class Pet{
 
-    constructor(name, hunger, thirst, energy, happiness){
-        this.name = name; //is ths repeating?
+    constructor(name){
+        this.name = name;
         this.hunger = 100;
         this.thirst = 100;
         this.energy = 100;
@@ -97,10 +97,10 @@ class Dragon extends Pet{
 
 
 const DecreaseStats = () =>{
-    testDragonName.hunger -= 0;
-    testDragonName.thirst -= 00;
-    testDragonName.energy -= 0;
-    testDragonName.happiness -= 10;
+    testDragonName.hunger -= 10;
+    testDragonName.thirst -= 10;
+    testDragonName.energy -= 10;
+    testDragonName.happiness -= 0;
     console.log(testDragonName);
     
 
@@ -170,7 +170,7 @@ const DecreaseStats = () =>{
         DragImg[2].style.display = "none";
         DragImg[3].style.display = "none";
         DragImg[4].style.display = "none";
-        // DragImg[5].style.display = "none"; DeadImg doesn't exist yet
+        DragImg[5].style.display = "none";
     } 
     else if(testDragonName.thirst <= 50 && testDragonName.thirst < testDragonName.hunger && testDragonName.thirst < testDragonName.energy && testDragonName.thirst < testDragonName.happiness){
         DragImg[0].style.display = "none";
@@ -178,7 +178,7 @@ const DecreaseStats = () =>{
         DragImg[2].style.display = "Block"; //thirsty
         DragImg[3].style.display = "none";
         DragImg[4].style.display = "none";
-        // DragImg[5].style.display = "none"; DeadImg doesn't exist yet  
+        DragImg[5].style.display = "none"; 
     }
     else if (testDragonName.energy <= 50 && testDragonName.energy < testDragonName.hunger && testDragonName.energy < testDragonName.thirst && testDragonName.energy < testDragonName.happiness){
         DragImg[0].style.display = "none";
@@ -186,7 +186,7 @@ const DecreaseStats = () =>{
         DragImg[2].style.display = "none";
         DragImg[3].style.display = "block"; //sleepy
         DragImg[4].style.display = "none";
-        // DragImg[5].style.display = "none"; DeadImg doesn't exist yet    
+        DragImg[5].style.display = "none";  
     }
     else if (testDragonName.happiness <= 50 && testDragonName.happiness < testDragonName.hunger && testDragonName.happiness < testDragonName.thirst && testDragonName.happiness < testDragonName.energy){
         DragImg[0].style.display = "none";
@@ -194,25 +194,37 @@ const DecreaseStats = () =>{
         DragImg[2].style.display = "none";
         DragImg[3].style.display = "none";
         DragImg[4].style.display = "block"; //sad
-        // DragImg[5].style.display = "none"; DeadImg doesn't exist yet
+        DragImg[5].style.display = "none";
     }
-    // else if (testDragonName.hunger == 0 || testDragonName.thirst == 0 || testDragonName.energy ==0 || testDragonName.happiness ==0){
-    //     DragImg[0].style.display = "none";
-    //     DragImg[1].style.display = "none";
-    //     DragImg[2].style.display = "none";
-    //     DragImg[3].style.display = "none";
-    //     DragImg[4].style.display = "none";
-    //     DragImg[5].style.display = "block";
-    // } Dead image doesn't exist yet
+    else if (testDragonName.hunger == 0 || testDragonName.thirst == 0 || testDragonName.energy == 0 || testDragonName.happiness == 0){
+        DragImg[0].style.display = "none";
+        DragImg[1].style.display = "none";
+        DragImg[2].style.display = "none";
+        DragImg[3].style.display = "none";
+        DragImg[4].style.display = "none";
+        DragImg[5].style.display = "block"; //dead
+    } 
     else {
         DragImg[0].style.display = "block"; //normal
         DragImg[1].style.display = "none";
         DragImg[2].style.display = "none";
         DragImg[3].style.display = "none";
         DragImg[4].style.display = "none";
-        // DragImg[5].style.display = "none"; DeadImg doesn't exist ye
+        DragImg[5].style.display = "none";
     }
 }
+IntButton[0].addEventListener("click", () => {
+    testDragonName.Eats()
+})
+IntButton[1].addEventListener("click", () => {
+    testDragonName.Drinks()
+})
+IntButton[2].addEventListener("click", () => {
+    testDragonName.Sleeps()
+})
+IntButton[3].addEventListener("click", () => {
+    testDragonName.BurnVillage()
+})
 
 
 
