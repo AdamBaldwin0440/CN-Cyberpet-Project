@@ -82,7 +82,6 @@ class Dragon extends Pet{
     console.log(`${this.name} is having fun rampaging across the land. How lovely`);
     InteractText.innerText = `${this.name} is burning a village, bless them`;    
     return this
->>>>>>> ff2701de0cf2bcc50fae7d6613c6ee40f9ff6cfa
    }
    Stats() {
     return console.table({
